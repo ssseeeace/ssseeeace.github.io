@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: Arial, sans-serif
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #900c3f;
+    z-index: 1000;
+    padding: .5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+#navbar li {
+    margin: 0 1rem
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color .3s ease
+}
+
+#navbar a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s ease
+}
+
+#navbar a:hover {
+    color: #f8f9fa
+}
+
+#navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left
+}
+
+@media (max-width:768px) {
+    #navbar {
+        flex-direction: column
+    }
+
+    #navbar ul {
+        display: none
+    }
+
+    #navbar button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 1rem
+    }
+}
+
+section {
+    padding: 2rem
+}
+
+section {
+    padding: 2rem;
+    text-align: center
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #900c3f
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#profile-picture {
+    display: block;
+    max-width: 300px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform .3s ease
+}
+
+#profile-picture:hover {
+    transform: scale(1.1)
+}
+
+.research-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+}
+
+.research-card {
+    flex: 0 1 calc(20% - 20px);
+    /* background-color: #f8f9fa; */
+
+
+    padding: 1rem;
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+    min-height: 10rem;
+
+    /* Add this line and adjust the value as needed */
+}
+
+.research-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem
+}
+
+/* .research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
+} */
+
+.research-card a {
+    text-decoration: none;
+    color: #900c3f
+}
+
+.research-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700
+}
+
+@media (max-width:992px) {
+    .research-card {
+        flex: 0 1 calc(100% - 20px)
+    }
+}
+
+
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #900c3f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+}
+
+.resume-button:hover {
+    background-color: #581845;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
+}
+
+#home {
+    background-color: #936576;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem
+}
+
+#home img {
+    max-width: 300px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform .3s ease, box-shadow .3s ease
+}
+
+#home img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.home-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #900c3f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color .3s ease
+}
+
+.cta-button:hover {
+    background-color: #581845
+}
+
+.home-content p.honors-student {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem
+}
+
+.home-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem
+}
+
+#contact {
+    background-color: #f8f9fa;
+    padding: 2rem
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #900c3f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+}
+
+.email-button:hover {
+    background-color: #581845;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem
+}
+
+.social-icons {
+    display: flex;
+    align-items: center
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem
+}
+
+svg {
+    color: #fff
+}
+
+.picture-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -10px
+}
+
+.placeholder {
+    background-color: #ccc
+}
+
+.picture-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: .5rem
+}
+
+.picture-row img {
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+}
+
+.picture-row img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .15)
+}
+
+/* Add this to your existing CSS */
+
+.research-card,
+.project-card {
+    position: relative;
+    perspective: 1000px;
+}
+
+.research-card:hover .flipper,
+.project-card:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex: 0 1 calc(20% - 20px);
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    padding: 0.5rem;
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+    min-height: 25rem;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.project-card {
+    height: 25rem;
+    /* rest of the styles */
+}
+
+.flipper {
+    height: 100%;
+    /* rest of the styles */
+}
+
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* Increased gap between project cards */
+    justify-content: center;
+    margin-bottom: 2rem;
+    /* Add some margin to the bottom of the project grid */
+}
+
+.project-card {
+    flex: 0 1 calc(50% - 40px);
+    /* Adjust the percentage calculation to consider the increased gap */
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    height: 42rem;
+    padding-top: 2rem;
+    /* Add some margin to the bottom of each project card */
+}
+
+.hack {
+    flex: 0 1 calc(50% - 40px);
+    /* Adjust the percentage calculation to consider the increased gap */
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    height: 47rem;
+    padding-bottom: 15rem;
+    /* Add some margin to the bottom of each project card */
+}
+
+section#projects {
+    padding-top: 17rem;
+    /* Increase the padding of the projects section */
+}
+
+.project-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #900C3F;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .project-card {
+        flex: 0 1 calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ... Existing responsive styles ... */
+
+    section#projects {
+        padding-top: 0;
+    }
+
+    .research-card,
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 0rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 40rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .research-card img,
+    .project-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .research-card h3,
+    .project-card h3 {
+        margin-top: 1rem;
+    }
+
+    .research-card p,
+    .project-card p {
+        margin-top: 0.5rem;
+    }
+
+    .research-card .project-link,
+    .project-card .project-link {
+        margin-top: 1rem;
+    }
+
+    .research-grid,
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Disable animations on mobile */
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        transform: none;
+    }
+
+    /* Display front and back content without flip effect */
+    .flip-container .front,
+    .flip-container .back {
+        position: relative;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ... Existing CSS ... */
+
+.animate-text {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animate-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ... Rest of CSS ... */
