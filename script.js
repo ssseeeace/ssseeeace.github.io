@@ -74,3 +74,5 @@ window.addEventListener("load", animateWelcomeText);
 
   // ... Rest of JavaScript ...
 
+
+

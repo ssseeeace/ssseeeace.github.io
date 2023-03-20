@@ -1,3 +1,35 @@
+.bg {
+    animation: slide 4s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #900c3f 50%, #936576 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 5s;
+}
+
+.bg3 {
+    animation-duration: 6s;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -147,7 +179,6 @@ p {
     transition: transform .3s ease, box-shadow .3s ease;
     min-height: 10rem;
 
-    /* Add this line and adjust the value as needed */
 }
 
 .research-card img {
@@ -198,6 +229,14 @@ p {
     box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
 }
 
+#about,
+#research,
+#projects,
+#contact {
+    background-color: white;
+}
+
+/* 
 #home {
     background-color: #936576;
     min-height: 100vh;
@@ -205,7 +244,7 @@ p {
     justify-content: center;
     align-items: center;
     padding-top: 5rem
-}
+} */
 
 #home img {
     max-width: 300px;
@@ -233,6 +272,23 @@ p {
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+.home-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem
 }
 
 .home-content {
@@ -365,7 +421,6 @@ svg {
     box-shadow: 0 8px 12px rgba(0, 0, 0, .15)
 }
 
-/* Add this to your existing CSS */
 
 .research-card,
 .project-card {
@@ -511,7 +566,6 @@ section#projects {
 }
 
 @media screen and (max-width: 768px) {
-    /* ... Existing responsive styles ... */
 
     section#projects {
         padding-top: 0;
@@ -581,7 +635,6 @@ section#projects {
     }
 }
 
-/* ... Existing CSS ... */
 
 .animate-text {
     opacity: 0;
@@ -593,5 +646,3 @@ section#projects {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ... Rest of CSS ... */
