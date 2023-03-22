@@ -72,7 +72,19 @@ function animateWelcomeText() {
 // Call the function when the page loads
 window.addEventListener("load", animateWelcomeText);
 
-  // ... Rest of JavaScript ...
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    let darkModeEnabled = false;
 
+    darkModeToggle.addEventListener("click", function () {
+        console.log("Dark Mode Toggle Clicked"); // Add this line
+        if (darkModeEnabled) {
+            document.body.classList.remove("dark-mode");
+        } else {
+            document.body.classList.add("dark-mode");
+        }
+        darkModeEnabled = !darkModeEnabled;
+    });
+});
