@@ -88,3 +88,47 @@ document.addEventListener("DOMContentLoaded", function () {
         darkModeEnabled = !darkModeEnabled;
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    let darkModeEnabled = false;
+
+    darkModeToggle.addEventListener("click", function () {
+        if (darkModeEnabled) {
+            document.body.classList.remove("dark-mode");
+        } else {
+            document.body.classList.add("dark-mode");
+        }
+        darkModeEnabled = !darkModeEnabled;
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    let darkModeEnabled = false;
+
+    darkModeToggle.addEventListener("click", function () {
+        if (darkModeEnabled) {
+            document.body.classList.remove("dark-mode");
+        } else {
+            document.body.classList.add("dark-mode");
+        }
+        darkModeEnabled = !darkModeEnabled;
+    });
+}); const darkModeToggle = document.getElementById('dark-mode-toggle');
+const htmlElement = document.documentElement;
+
+darkModeToggle.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark-mode');
+
+    if (htmlElement.classList.contains('dark-mode')) {
+        darkModeToggle.classList.add('light-to-dark');
+        darkModeToggle.classList.remove('dark-to-light');
+    } else {
+        darkModeToggle.classList.add('dark-to-light');
+        darkModeToggle.classList.remove('light-to-dark');
+    }
+});
+

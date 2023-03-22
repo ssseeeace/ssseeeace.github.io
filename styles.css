@@ -55,7 +55,8 @@ header {
     align-items: center;
     padding: 0 1rem;
     max-width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
+    height: 2rem;
 }
 
 #navbar ul {
@@ -77,6 +78,7 @@ header {
     transition: color .3s ease
 }
 
+
 #navbar a::before {
     content: "";
     position: absolute;
@@ -90,6 +92,7 @@ header {
     transition: transform .3s ease
 }
 
+#navbar button,
 #navbar a:hover {
     color: #f8f9fa
 }
@@ -372,12 +375,13 @@ p {
 
 .social-links {
     display: flex;
-    gap: 1rem
+    gap: 1rem;
 }
 
 .social-icons {
     display: flex;
-    align-items: center
+    align-items: center;
+
 }
 
 .icon {
@@ -676,4 +680,320 @@ section#projects {
 
 .dark-mode-toggle:hover {
     background-color: #555;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #f0f0f0;
+}
+
+body.dark-mode header {
+    background-color: rgb(28, 28, 28);
+}
+
+body.dark-mode a {
+    color: #2ca9e1;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+    padding: 6px 12px;
+    text-transform: uppercase;
+}
+
+#dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #dark-mode-toggle {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: rgba(240, 240, 240, 0.1);
+}
+
+body.dark-mode .bg {
+    animation: slide 4s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #222 50%, rgb(119, 119, 119) 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+
+}
+
+
+
+body.dark-mode .bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 5s;
+}
+
+.bg3 {
+    animation-duration: 6s;
+}
+
+.dark-mode .research-card,
+.dark-mode .project-card {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .research-card a,
+.dark-mode .project-card a {
+    color: #f1f1f1;
+}
+
+.dark-mode #about,
+.dark-mode #research,
+.dark-mode #projects,
+.dark-mode #contact {
+    background-color: #1a1a1a;
+}
+
+.dark-mode #contact {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .resume-button,
+.dark-mode .cta-button,
+.dark-mode .email-button {
+    background-color: #2c2c2c;
+    color: #fff;
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+.dark-mode .resume-button:hover,
+.dark-mode .cta-button:hover,
+.dark-mode .email-button:hover {
+    background-color: #444;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2);
+}
+
+
+body.dark-mode h2 {
+    color: #2ca9e1;
+}
+
+
+.dark-mode .research-card {
+    flex: 0 1 calc(20% - 20px);
+    /* background-color: #f8f9fa; */
+
+
+    padding: 1rem;
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+    min-height: 10rem;
+
+}
+
+.dark-mode .research-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem
+}
+
+/* .research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
+} */
+
+.dark-mode .research-card a {
+    text-decoration: none;
+    color: white;
+}
+
+.dark-mode .research-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700
+}
+
+.dark-mode .front,
+.dark-mode .back {
+    background-color: black;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    #dark-mode-toggle {
+        font-size: 20px;
+    }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* Add a transition for the background color, color, and other properties if needed */
+    transition: background-color 1s ease, color 1s ease;
+}
+
+p {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-icon {
+    width: 1.5rem;
+    height: auto;
+    filter: invert(100%);
+}
+
+
+card a,
+.dark-mode .project-card a {
+    color: #2ca9e1;
+    text-decoration: none;
+}
+
+card a,
+.project-card a {
+    color: #900C3F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dark-mode .research-card,
+.dark-mode .project-card {
+    background-color: black;
+}
+
+
+#dark-mode-toggle {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 1px solid white;
+}
+
+#dark-mode-toggle:hover {
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.social-icons {
+    display: flex;
+}
+
+#dark-mode-toggle {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: auto;
+    padding: 4px;
+    /* Adjust the padding around the button */
+}
+
+.dark-icon {
+    width: 20px;
+    /* Reduce the image width */
+    height: 20px;
+
+
+    /* Reduce the image height */
+}
+
+#dark-mode-toggle {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+.dark-mode .research-card {
+    background-color: #1a1a1a;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#dark-mode-toggle:active {
+    animation: pulse 0.4s ease-out;
+}
+
+@keyframes cool-transition {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background-color: var(--light-icon-bg);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+        background-color: var(--light-icon-bg);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+        background-color: var(--dark-icon-bg);
+    }
+}
+
+@keyframes cool-transition-back {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background-color: var(--dark-icon-bg);
+    }
+
+    50% {
+        transform: rotate(-180deg) scale(1.3);
+        background-color: var(--dark-icon-bg);
+    }
+
+    100% {
+        transform: rotate(-360deg) scale(1);
+        background-color: var(--light-icon-bg);
+    }
+}
+
+#dark-mode-toggle {
+    /* Add this property to enable smooth transition */
+    will-change: transform, background-color;
+}
+
+#dark-mode-toggle.light-to-dark {
+    animation: cool-transition 1s ease-in-out forwards;
+}
+
+#dark-mode-toggle.dark-to-light {
+    animation: cool-transition-back 1s ease-in-out forwards;
 }
