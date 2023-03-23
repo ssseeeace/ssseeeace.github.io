@@ -487,6 +487,11 @@ svg {
     /* rest of the styles */
 }
 
+h2,
+.project-card {
+    color: #900c3f;
+}
+
 .flipper {
     height: 100%;
     /* rest of the styles */
