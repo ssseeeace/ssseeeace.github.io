@@ -487,11 +487,6 @@ svg {
     /* rest of the styles */
 }
 
-h2,
-.project-card {
-    color: #900c3f;
-}
-
 .flipper {
     height: 100%;
     /* rest of the styles */
@@ -559,6 +554,7 @@ section#projects {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #900C3F;
 }
 
 .project-card p {
@@ -887,6 +883,12 @@ card a,
 .dark-mode .research-card,
 .dark-mode .project-card {
     background-color: black;
+
+}
+
+.dark-mode .project-card h3 {
+    color: white;
+
 }
 
 
@@ -1001,4 +1003,8 @@ card a,
 
 #dark-mode-toggle.dark-to-light {
     animation: cool-transition-back 1s ease-in-out forwards;
+}
+
+.dark-mode .email-button {
+    border: 0.5px solid #fff;
 }
