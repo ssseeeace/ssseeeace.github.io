@@ -498,7 +498,7 @@ svg {
     gap: 40px;
     /* Increased gap between project cards */
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     /* Add some margin to the bottom of the project grid */
 }
 

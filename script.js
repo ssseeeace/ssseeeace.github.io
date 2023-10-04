@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('a[href^="#"]');
 
+    const header = document.querySelector('header');
+    const headerHeight = header.offsetHeight;
+
+    const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(function (link) {
         link.addEventListener("click", function (event) {
             const targetID = this.getAttribute("href");
@@ -8,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (targetElement) {
                 event.preventDefault();
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Update this line
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                 const startPosition = window.pageYOffset;
                 const distance = targetPosition - startPosition;
                 const duration = 800;
@@ -29,6 +32,36 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const flipContainers = document.querySelectorAll(".flip-container");
+    flipContainers.forEach(function (flipContainer) {
+        flipContainer.addEventListener("click", function () {
+            this.classList.toggle("hover");
+        });
+    });
+
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    let darkModeEnabled = false;
+
+    darkModeToggle.addEventListener("click", function () {
+        if (darkModeEnabled) {
+            document.body.classList.remove("dark-mode");
+        } else {
+            document.body.classList.add("dark-mode");
+        }
+        darkModeEnabled = !darkModeEnabled;
+    });
+
+    const htmlElement = document.documentElement;
+    darkModeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark-mode');
+        if (htmlElement.classList.contains('dark-mode')) {
+            darkModeToggle.classList.add('light-to-dark');
+            darkModeToggle.classList.remove('dark-to-light');
+        } else {
+            darkModeToggle.classList.add('dark-to-light');
+            darkModeToggle.classList.remove('light-to-dark');
+        }
+    });
 
     function easeInOutCubic(t, b, c, d) {
         t /= d / 2;
@@ -36,31 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         t -= 2;
         return (c / 2) * (t * t * t + 2) + b;
     }
-});
-// Get the header element and home section
-const header = document.querySelector("header");
-const homeSection = document.querySelector("#home");
 
-// Function to update the header's class based on the scroll position
-function updateHeaderOnScroll() {
-    if (window.scrollY <= homeSection.offsetHeight - 100) {
-        header.classList.add("thick-navbar");
-        header.style.height = "1000px"; // Add this line
-    } else {
-        header.classList.remove("thick-navbar");
-        header.style.height = "60px"; // Add this line
-    }
-}
-document.addEventListener("DOMContentLoaded", function () {
-    const flipContainers = document.querySelectorAll(".flip-container");
-
-    flipContainers.forEach(function (flipContainer) {
-        flipContainer.addEventListener("click", function () {
-            this.classList.toggle("hover");
-        });
-    });
 });
-// ... Existing JavaScript ...
+
+// ... Other functions like animateWelcomeText and updateHeaderOnScroll ...
+
+
 
 function animateWelcomeText() {
     const welcomeText = document.querySelector("#home .animate-text");
