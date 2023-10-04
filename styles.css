@@ -130,7 +130,7 @@ section {
 
 
 h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
     color: #900c3f;
     text-align: center;
@@ -484,12 +484,11 @@ svg {
 
 .project-card {
     height: 25rem;
-    /* rest of the styles */
+    transform: scale(0.8);
 }
 
 .flipper {
     height: 100%;
-    /* rest of the styles */
 }
 
 
@@ -545,7 +544,8 @@ section#projects {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
+    transform: scale(0.9);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -1007,4 +1007,14 @@ card a,
 
 .dark-mode .email-button {
     border: 0.5px solid #fff;
+}
+
+.green {
+    height: 47rem;
+}
+
+.projects-grid {
+    /* ... (rest of your properties) */
+    gap: 20px;
+    /* Reduce this value to your desired amount */
 }
