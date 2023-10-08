@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ... Other functions like animateWelcomeText and updateHeaderOnScroll ...
 
 
 

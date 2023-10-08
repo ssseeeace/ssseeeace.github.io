@@ -7,26 +7,25 @@
     position: fixed;
     right: -50%;
     top: 0;
-    z-index: -1;
+    z-index: -1
 }
 
 .bg2 {
     animation-direction: alternate-reverse;
-    animation-duration: 5s;
+    animation-duration: 5s
 }
 
 .bg3 {
-    animation-duration: 6s;
+    animation-duration: 6s
 }
-
 
 @keyframes slide {
     0% {
-        transform: translateX(-25%);
+        transform: translateX(-25%)
     }
 
     100% {
-        transform: translateX(25%);
+        transform: translateX(25%)
     }
 }
 
@@ -56,7 +55,7 @@ header {
     padding: 0 1rem;
     max-width: 1200px;
     margin: 0 auto;
-    height: 2rem;
+    height: 2rem
 }
 
 #navbar ul {
@@ -78,7 +77,6 @@ header {
     transition: color .3s ease
 }
 
-
 #navbar a::before {
     content: "";
     position: absolute;
@@ -92,8 +90,8 @@ header {
     transition: transform .3s ease
 }
 
-#navbar button,
-#navbar a:hover {
+#navbar a:hover,
+#navbar button {
     color: #f8f9fa
 }
 
@@ -122,23 +120,20 @@ header {
     }
 }
 
-
 section {
-    padding: 2rem;
-
+    padding: 2rem
 }
-
 
 h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #900c3f;
-    text-align: center;
+    text-align: center
 }
 
 p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     max-width: 800px;
     margin-left: auto;
@@ -167,20 +162,15 @@ p {
     gap: 20px;
     justify-content: center;
     z-index: 1;
-    position: relative;
-
+    position: relative
 }
 
 .research-card {
     flex: 0 1 calc(20% - 20px);
-    /* background-color: #f8f9fa; */
-
-
     padding: 1rem;
     text-align: left;
     transition: transform .3s ease, box-shadow .3s ease;
-    min-height: 10rem;
-
+    min-height: 10rem
 }
 
 .research-card img {
@@ -189,11 +179,6 @@ p {
     border-radius: 5px;
     margin-bottom: 1rem
 }
-
-/* .research-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
-} */
 
 .research-card a {
     text-decoration: none;
@@ -212,14 +197,10 @@ p {
     }
 }
 
-
 .resume-button {
     display: block;
-    /* Add this line */
     margin-left: auto;
-    /* Add this line */
     margin-right: auto;
-    /* Add this line */
     padding: 10px 20px;
     background-color: #900c3f;
     color: #fff;
@@ -227,9 +208,8 @@ p {
     font-weight: 700;
     border-radius: 5px;
     transition: background-color .3s ease, box-shadow .3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
 }
-
 
 .resume-button:hover {
     background-color: #581845;
@@ -237,21 +217,11 @@ p {
 }
 
 #about,
-#research,
+#contact,
 #projects,
-#contact {
-    background-color: white;
+#research {
+    background-color: #fff
 }
-
-/* 
-#home {
-    background-color: #936576;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5rem
-} */
 
 #home img {
     max-width: 400px;
@@ -375,13 +345,12 @@ p {
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1rem
 }
 
 .social-icons {
     display: flex;
-    align-items: center;
-
+    align-items: center
 }
 
 .icon {
@@ -400,10 +369,6 @@ svg {
     align-items: center;
     flex-wrap: wrap;
     margin: 0 -10px
-}
-
-.placeholder {
-    background-color: #ccc
 }
 
 .picture-row {
@@ -429,28 +394,27 @@ svg {
     box-shadow: 0 8px 12px rgba(0, 0, 0, .15)
 }
 
-
-.research-card,
-.project-card {
+.project-card,
+.research-card {
     position: relative;
-    perspective: 1000px;
+    perspective: 1000px
 }
 
-.research-card:hover .flipper,
-.project-card:hover .flipper {
-    transform: rotateY(180deg);
+.project-card:hover .flipper,
+.research-card:hover .flipper {
+    transform: rotateY(180deg)
 }
 
 .flipper {
-    transition: 0.6s;
+    transition: .6s;
     transform-style: preserve-3d;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
-.front,
-.back {
+.back,
+.front {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -461,14 +425,14 @@ svg {
     background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
-    padding: 0.5rem;
+    padding: .5rem;
     text-align: left;
     transition: transform .3s ease, box-shadow .3s ease;
-    min-height: 25rem;
+    min-height: 25rem
 }
 
 .front {
-    z-index: 2;
+    z-index: 2
 }
 
 .back {
@@ -479,192 +443,171 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.5rem
 }
 
 .project-card {
     height: 25rem;
-    transform: scale(0.8);
+    transform: scale(.8)
 }
 
 .flipper {
-    height: 100%;
+    height: 100%
 }
-
 
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    /* Increased gap between project cards */
     justify-content: center;
-    margin-bottom: 0.5rem;
-    /* Add some margin to the bottom of the project grid */
+    margin-bottom: .5rem
 }
 
 .project-card {
     flex: 0 1 calc(50% - 40px);
-    /* Adjust the percentage calculation to consider the increased gap */
     background-color: #f8f9fa;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
     padding: 1rem;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
     margin-bottom: 2rem;
     height: 42rem;
-    padding-top: 2rem;
-    /* Add some margin to the bottom of each project card */
+    padding-top: 2rem
 }
 
 .hack {
     flex: 0 1 calc(50% - 40px);
-    /* Adjust the percentage calculation to consider the increased gap */
     background-color: #f8f9fa;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
     padding: 1rem;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
     margin-bottom: 2rem;
     height: 47rem;
-    padding-bottom: 15rem;
-    /* Add some margin to the bottom of each project card */
+    padding-bottom: 15rem
 }
 
 section#projects {
-    padding-top: 20rem;
+    padding-top: 20rem
 }
 
 .project-card img {
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .project-card:hover {
-    /* transform: translateY(-5px); */
-    transform: scale(0.9);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(.9);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
 }
 
 .project-card h3 {
     margin: 0;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1rem;
-    color: #900C3F;
+    color: #900c3f
 }
 
 .project-card p {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .project-link {
     text-decoration: none;
-    color: #900C3F;
-    font-weight: bold;
+    color: #900c3f;
+    font-weight: 700
 }
 
-@media (max-width: 992px) {
+@media (max-width:992px) {
     .project-card {
-        flex: 0 1 calc(100% - 20px);
+        flex: 0 1 calc(100% - 20px)
     }
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width:768px) {
     section#projects {
-        padding-top: 0;
+        padding-top: 0
     }
 
-    .research-card,
-    .project-card {
+    .project-card,
+    .research-card {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
         border-radius: 5px;
-        padding: 0rem;
+        padding: 0;
         margin-bottom: 1rem;
         width: 100%;
         height: 40rem;
-        padding-bottom: 1rem;
+        padding-bottom: 1rem
     }
 
-
-    .research-card img,
-    .project-card img {
+    .project-card img,
+    .research-card img {
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 5px;
+        border-radius: 5px
     }
 
-    .research-card h3,
-    .project-card h3 {
-        margin-top: 1rem;
+    .project-card h3,
+    .research-card h3 {
+        margin-top: 1rem
     }
 
-    .research-card p,
-    .project-card p {
-        margin-top: 0.5rem;
+    .project-card p,
+    .research-card p {
+        margin-top: .5rem
     }
 
-    .research-card .project-link,
-    .project-card .project-link {
-        margin-top: 1rem;
+    .project-card .project-link,
+    .research-card .project-link {
+        margin-top: 1rem
     }
 
-    .research-grid,
-    .projects-grid {
+    .projects-grid,
+    .research-grid {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
 
-    /* Disable animations on mobile */
-    .flip-container:hover .flipper,
-    .flip-container.hover .flipper {
-        transform: none;
+    .flip-container:hover .flipper {
+        transform: none
     }
 
-    /* Display front and back content without flip effect */
-    .flip-container .front,
-    .flip-container .back {
+    .flip-container .back,
+    .flip-container .front {
         position: relative;
         backface-visibility: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
 }
-
 
 .animate-text {
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 1s, transform 1s;
-}
-
-.animate-text.visible {
-    opacity: 1;
-    transform: translateY(0);
+    transition: opacity 1s, transform 1s
 }
 
 .center-button {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
-
-
 #about h2 {
-    padding-bottom: 2rem;
+    padding-bottom: 2rem
 }
 
 .dark-mode-toggle {
@@ -676,24 +619,24 @@ section#projects {
     color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color .3s
 }
 
 .dark-mode-toggle:hover {
-    background-color: #555;
+    background-color: #555
 }
 
 body.dark-mode {
     background-color: #222;
-    color: #f0f0f0;
+    color: #f0f0f0
 }
 
 body.dark-mode header {
-    background-color: rgb(28, 28, 28);
+    background-color: #1c1c1c
 }
 
 body.dark-mode a {
-    color: #2ca9e1;
+    color: #2ca9e1
 }
 
 #dark-mode-toggle {
@@ -705,98 +648,89 @@ body.dark-mode a {
     font-size: 14px;
     margin: 10px;
     padding: 6px 12px;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 #dark-mode-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, .1)
 }
 
 body.dark-mode #dark-mode-toggle {
     border-color: #f0f0f0;
-    color: #f0f0f0;
+    color: #f0f0f0
 }
 
 body.dark-mode #dark-mode-toggle:hover {
-    background-color: rgba(240, 240, 240, 0.1);
+    background-color: rgba(240, 240, 240, .1)
 }
 
 body.dark-mode .bg {
     animation: slide 4s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #222 50%, rgb(119, 119, 119) 50%);
+    background-image: linear-gradient(-60deg, #222 50%, #777 50%);
     bottom: 0;
     left: -50%;
     opacity: .5;
     position: fixed;
     right: -50%;
     top: 0;
-    z-index: -1;
-
+    z-index: -1
 }
-
-
 
 body.dark-mode .bg2 {
     animation-direction: alternate-reverse;
-    animation-duration: 5s;
+    animation-duration: 5s
 }
 
 .bg3 {
-    animation-duration: 6s;
+    animation-duration: 6s
 }
 
-.dark-mode .research-card,
-.dark-mode .project-card {
-    background-color: #1a1a1a;
+.dark-mode .project-card,
+.dark-mode .research-card {
+    background-color: #1a1a1a
 }
 
-.dark-mode .research-card a,
-.dark-mode .project-card a {
-    color: #f1f1f1;
+.dark-mode .project-card a,
+.dark-mode .research-card a {
+    color: #f1f1f1
 }
 
 .dark-mode #about,
-.dark-mode #research,
+.dark-mode #contact,
 .dark-mode #projects,
-.dark-mode #contact {
-    background-color: #1a1a1a;
+.dark-mode #research {
+    background-color: #1a1a1a
 }
 
 .dark-mode #contact {
-    background-color: #2c2c2c;
+    background-color: #2c2c2c
 }
 
-.dark-mode .resume-button,
 .dark-mode .cta-button,
-.dark-mode .email-button {
+.dark-mode .email-button,
+.dark-mode .resume-button {
     background-color: #2c2c2c;
     color: #fff;
-    transition: background-color .3s ease, box-shadow .3s ease;
+    transition: background-color .3s ease, box-shadow .3s ease
 }
 
-.dark-mode .resume-button:hover,
 .dark-mode .cta-button:hover,
-.dark-mode .email-button:hover {
+.dark-mode .email-button:hover,
+.dark-mode .resume-button:hover {
     background-color: #444;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
 }
-
 
 body.dark-mode h2 {
-    color: #2ca9e1;
+    color: #2ca9e1
 }
-
 
 .dark-mode .research-card {
     flex: 0 1 calc(20% - 20px);
-    /* background-color: #f8f9fa; */
-
-
     padding: 1rem;
     text-align: left;
     transition: transform .3s ease, box-shadow .3s ease;
-    min-height: 10rem;
-
+    min-height: 10rem
 }
 
 .dark-mode .research-card img {
@@ -806,14 +740,9 @@ body.dark-mode h2 {
     margin-bottom: 1rem
 }
 
-/* .research-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, .2)
-} */
-
 .dark-mode .research-card a {
     text-decoration: none;
-    color: white;
+    color: #fff
 }
 
 .dark-mode .research-card h3 {
@@ -822,9 +751,9 @@ body.dark-mode h2 {
     font-weight: 700
 }
 
-.dark-mode .front,
-.dark-mode .back {
-    background-color: black;
+.dark-mode .back,
+.dark-mode .front {
+    background-color: #000
 }
 
 #dark-mode-toggle {
@@ -832,16 +761,16 @@ body.dark-mode h2 {
     border: none;
     color: #fff;
     font-size: 24px;
-    cursor: pointer;
+    cursor: pointer
 }
 
 #dark-mode-toggle:focus {
-    outline: none;
+    outline: 0
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     #dark-mode-toggle {
-        font-size: 20px;
+        font-size: 20px
     }
 }
 
@@ -852,169 +781,225 @@ h3,
 h4,
 h5,
 h6 {
-    /* Add a transition for the background color, color, and other properties if needed */
-    transition: background-color 1s ease, color 1s ease;
+    transition: background-color 1s ease, color 1s ease
 }
 
 p {
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color .5s ease, color .5s ease
 }
 
 .dark-icon {
     width: 1.5rem;
     height: auto;
-    filter: invert(100%);
+    filter: invert(100%)
 }
 
-
-card a,
-.dark-mode .project-card a {
+.dark-mode .project-card a,
+card a {
     color: #2ca9e1;
-    text-decoration: none;
+    text-decoration: none
 }
 
-card a,
-.project-card a {
-    color: #900C3F;
+.project-card a,
+card a {
+    color: #900c3f;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700
 }
 
-.dark-mode .research-card,
-.dark-mode .project-card {
-    background-color: black;
-
+.dark-mode .project-card,
+.dark-mode .research-card {
+    background-color: #000
 }
 
 .dark-mode .project-card h3 {
-    color: white;
-
+    color: #fff
 }
-
 
 #dark-mode-toggle {
     border: 1px solid transparent;
     border-radius: 50%;
     margin-left: 1rem;
-    border: 1px solid white;
+    border: 1px solid #fff
 }
 
 #dark-mode-toggle:hover {
-    border: 1px solid white;
-    border-radius: 50%;
-
+    border: 1px solid #fff;
+    border-radius: 50%
 }
 
 .social-icons {
-    display: flex;
+    display: flex
 }
 
 #dark-mode-toggle {
     border: 1px solid transparent;
     border-radius: 50%;
     margin-left: auto;
-    padding: 4px;
-    /* Adjust the padding around the button */
+    padding: 4px
 }
 
 .dark-icon {
     width: 20px;
-    /* Reduce the image width */
-    height: 20px;
-
-
-    /* Reduce the image height */
+    height: 20px
 }
 
 #dark-mode-toggle {
     border: 1px solid transparent;
     border-radius: 50%;
-    margin-left: auto;
+    margin-left: auto
 }
 
 .dark-mode .research-card {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a
 }
 
 @keyframes pulse {
     0% {
         transform: scale(1);
-        opacity: 1;
+        opacity: 1
     }
 
     50% {
         transform: scale(1.1);
-        opacity: 0.7;
+        opacity: .7
     }
 
     100% {
         transform: scale(1);
-        opacity: 1;
+        opacity: 1
     }
 }
 
-
 #dark-mode-toggle:active {
-    animation: pulse 0.4s ease-out;
+    animation: pulse .4s ease-out
 }
 
 @keyframes cool-transition {
     0% {
-        transform: rotate(0deg) scale(1);
-        background-color: var(--light-icon-bg);
+        transform: rotate(0) scale(1);
+        background-color: var(--light-icon-bg)
     }
 
     50% {
         transform: rotate(180deg) scale(1.3);
-        background-color: var(--light-icon-bg);
+        background-color: var(--light-icon-bg)
     }
 
     100% {
         transform: rotate(360deg) scale(1);
-        background-color: var(--dark-icon-bg);
+        background-color: var(--dark-icon-bg)
     }
 }
 
 @keyframes cool-transition-back {
     0% {
-        transform: rotate(0deg) scale(1);
-        background-color: var(--dark-icon-bg);
+        transform: rotate(0) scale(1);
+        background-color: var(--dark-icon-bg)
     }
 
     50% {
         transform: rotate(-180deg) scale(1.3);
-        background-color: var(--dark-icon-bg);
+        background-color: var(--dark-icon-bg)
     }
 
     100% {
         transform: rotate(-360deg) scale(1);
-        background-color: var(--light-icon-bg);
+        background-color: var(--light-icon-bg)
     }
 }
 
 #dark-mode-toggle {
-    /* Add this property to enable smooth transition */
-    will-change: transform, background-color;
-}
-
-#dark-mode-toggle.light-to-dark {
-    animation: cool-transition 1s ease-in-out forwards;
-}
-
-#dark-mode-toggle.dark-to-light {
-    animation: cool-transition-back 1s ease-in-out forwards;
+    will-change: transform, background-color
 }
 
 .dark-mode .email-button {
-    border: 0.5px solid #fff;
+    border: .5px solid #fff
 }
 
 .green {
-    height: 47rem;
+    height: 47rem
 }
 
 .projects-grid {
-    /* ... (rest of your properties) */
+    gap: 20px
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    /* Reduce this value to your desired amount */
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 1rem
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+    margin-bottom: 2rem;
+    height: auto
+}
+
+@media (max-width:992px) {
+    .project-card {
+        grid-template-columns: 1fr
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: stretch
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+    display: flex;
+    flex-direction: column
+}
+
+.project-card img {
+    object-fit: cover;
+    height: 100px;
+    width: 100%
+}
+
+.project-card:hover {
+    transform: scale(.9)
+}
+
+.project-card {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.project-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover
+}
+
+.project-card a {
+    align-self: flex-end;
+    margin-top: auto
+}
+
+.project-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: (define appropriate height)
 }
