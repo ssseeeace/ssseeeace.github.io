@@ -1003,3 +1003,31 @@ card a {
     white-space: nowrap;
     max-height: (define appropriate height)
 }
+
+@media (max-width:768px) {
+    #navbar button {
+        font-size: 1.2rem;
+    }
+
+    #navbar a,
+    #navbar li {
+        padding: 10px;
+
+    }
+}
+
+.animate-text {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+
+}
+
+.visible {
+    opacity: 1;
+}
+
+#home .animate-text {
+    margin-top: 20px;
+    font-size: 1.8rem;
+
+}

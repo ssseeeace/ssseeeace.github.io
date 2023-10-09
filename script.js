@@ -82,6 +82,7 @@ function animateWelcomeText() {
     }, 100);
 }
 
+
 // Call the function when the page loads
 window.addEventListener("load", animateWelcomeText);
 
